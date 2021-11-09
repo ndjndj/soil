@@ -19,10 +19,10 @@ Next.js と Strapi(SQLite) を使用した SSG or SSR が優位か
   - SSG
 2. 案件
   - 更新頻度多
-  - SSG
+  - SSR
 3. 窓口
   - 更新頻度多
-  - SSG
+  - SSR
 
 ## stack
 
