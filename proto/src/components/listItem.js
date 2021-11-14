@@ -9,6 +9,11 @@ const useStyles = makeStyles((theme) => ({
         minWidth: 275,
         margin:'2% 2%'
     },
+    title: {
+        fontSize: 18,
+        paddingTop: '5%',
+        paddingLeft: '1%',
+    }
 }));
 
 export default function ListItem() {
@@ -18,7 +23,7 @@ export default function ListItem() {
     <Paper className={classes.root}>
         <Grid container spacing={3}>
             <Grid item xs>
-                <Typography variant="h5">title</Typography>
+                <Typography variant="h5" className={classes.title}>title</Typography>
             </Grid>
             <Grid item xs>
                 <Typography variant="h5">created day: </Typography>
