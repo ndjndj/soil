@@ -25,17 +25,11 @@ export default function SimpleList() {
 
   return (
     <div className={classes.root}>
-      <List component="nav" aria-label="main mailbox folders">
+      <List component="div" aria-label="main mailbox folders">
         <ListItem button>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
           <ListItemText primary="Inbox" />
         </ListItem>
         <ListItem button>
-          <ListItemIcon>
-            <DraftsIcon />
-          </ListItemIcon>
           <ListItemText primary="Drafts" />
           <ListItemText primary="Drafts" />
           <ListItemText primary="Drafts" />
