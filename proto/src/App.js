@@ -1,11 +1,15 @@
 import Header from "./components/header";
 import List from "./components/list"
+import { Container } from "@material-ui/core";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <List />
+      <Container>
+        <List />
+      </Container>
+
     </div>
   );
 }
