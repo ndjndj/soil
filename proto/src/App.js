@@ -1,6 +1,7 @@
 import Header from "./components/header";
 import List from "./components/list"
 import SimpleList from "./components/listsample";
+import SimpleCard from "./components/card";
 import { Container } from "@material-ui/core";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Container>
-        <SimpleList />
+        <SimpleCard />
       </Container>
 
     </div>
