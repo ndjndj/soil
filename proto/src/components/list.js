@@ -9,20 +9,20 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
 const createData = (
-  name,
-  category,
-  weight,
-  price
+  title,
+  create,
+  update,
+  sp
 ) => {
-  return { name, category, weight, price };
+  return { title, create, update, sp };
 };
 
 const rows = [
-  createData("チョコレート", "お菓子", 100, 120),
-  createData("ケーキ", "お菓子", 400, 480),
-  createData("りんご", "フルーツ", 500, 360),
-  createData("バナナ", "フルーツ", 200, 300),
-  createData("みかん", "フルーツ", 250, 180),
+  createData("タイトル1", "2021/12/1 12:00", "2021/12/1 12:00", "窓口"),
+  createData("タイトル2", "2021/12/1 12:00", "2021/12/1 12:00", "窓口"),
+  createData("タイトル3", "2021/12/1 12:00", "2021/12/1 12:00", "窓口"),
+  createData("タイトル4", "2021/12/1 12:00", "2021/12/1 12:00", "窓口"),
+  createData("タイトル5", "2021/12/1 12:00", "2021/12/1 12:00", "窓口"),
 ];
 
 const useStyles = makeStyles({
@@ -39,21 +39,21 @@ const List = () => {
             <Table className={classes.table} aria-label="simple table">
             <TableHead>
                 <TableRow>
-                <TableCell>商品名</TableCell>
-                <TableCell align="right">カテゴリー</TableCell>
-                <TableCell align="right">重量(g)</TableCell>
-                <TableCell align="right">価格(円)</TableCell>
+                <TableCell>タイトル</TableCell>
+                <TableCell align="right">作成日</TableCell>
+                <TableCell align="right">更新日</TableCell>
+                <TableCell align="right">種別</TableCell>
                 </TableRow>
             </TableHead>
             <TableBody>
                 {rows.map((row) => (
-                <TableRow key={row.name}>
+                <TableRow key={row.title}>
                     <TableCell component="th" scope="row">
                     {row.name}
                     </TableCell>
-                    <TableCell align="right">{row.category}</TableCell>
-                    <TableCell align="right">{row.weight}</TableCell>
-                    <TableCell align="right">{row.price}</TableCell>
+                    <TableCell align="right">{row.create}</TableCell>
+                    <TableCell align="right">{row.update}</TableCell>
+                    <TableCell align="right">{row.sp}</TableCell>
                 </TableRow>
                 ))}
             </TableBody>
