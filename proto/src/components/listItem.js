@@ -16,6 +16,9 @@ export default function ListItem() {
   return (
     <Paper className={classes.root}>
         <Typography variant="h5">title</Typography>
+        <Typography variant="h5">created day: </Typography>
+        <Typography variant="h5">updated day: </Typography>
+        <Typography variant="h5">type </Typography>
     </Paper>
   );
 }
