@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,10 +16,18 @@ export default function ListItem() {
 
   return (
     <Paper className={classes.root}>
-        <Typography variant="h5">title</Typography>
-        <Typography variant="h5">created day: </Typography>
-        <Typography variant="h5">updated day: </Typography>
-        <Typography variant="h5">type </Typography>
+        <Grid container spacing={3}>
+            <Grid item xs>
+                <Typography variant="h5">title</Typography>
+            </Grid>
+            <Grid item xs>
+                <Typography variant="h5">created day: </Typography>
+                <Typography variant="h5">updated day: </Typography>
+            </Grid>
+            <Grid item xs>
+                <Typography variant="h5">type </Typography>
+            </Grid>
+        </Grid>
     </Paper>
   );
 }
