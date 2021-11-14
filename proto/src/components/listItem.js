@@ -23,11 +23,11 @@ export default function ListItem() {
     <Paper className={classes.root}>
         <Grid container spacing={3}>
             <Grid item xs>
-                <Typography variant="h5" className={classes.title}>title</Typography>
+                <Typography variant="h2" className={classes.title}>title</Typography>
             </Grid>
             <Grid item xs>
-                <Typography variant="h5">created day: </Typography>
-                <Typography variant="h5">updated day: </Typography>
+                <Typography component="p">created day: </Typography>
+                <Typography component="p">updated day: </Typography>
             </Grid>
             <Grid item xs>
                 <Typography variant="h5">type </Typography>
