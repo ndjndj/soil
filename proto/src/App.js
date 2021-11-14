@@ -10,6 +10,9 @@ function App() {
       <Header />
       <Container>
         <SimpleCard />
+        <SimpleCard />
+        <SimpleCard />
+        <SimpleCard />
       </Container>
 
     </div>
