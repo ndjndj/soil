@@ -14,14 +14,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimplePaper() {
+export default function ListItem() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Paper elevation={0} />
       <Paper />
-      <Paper elevation={3} />
     </div>
   );
 }
