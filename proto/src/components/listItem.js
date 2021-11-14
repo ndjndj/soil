@@ -4,23 +4,18 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    '& > *': {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
+    root: {
+        minWidth: 275,
+        margin:'2% 2%'
     },
-  },
 }));
 
 export default function ListItem() {
   const classes = useStyles();
 
   return (
-    <Paper>
-        <Typography variant="h5">最近の更新</Typography>
+    <Paper className={classes.root}>
+        <Typography variant="h5">title</Typography>
     </Paper>
   );
 }
