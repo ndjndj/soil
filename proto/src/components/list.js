@@ -49,7 +49,7 @@ const List = () => {
                 {rows.map((row) => (
                 <TableRow key={row.title}>
                     <TableCell component="th" scope="row">
-                    {row.name}
+                    {row.title}
                     </TableCell>
                     <TableCell align="right">{row.create}</TableCell>
                     <TableCell align="right">{row.update}</TableCell>
