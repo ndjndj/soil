@@ -35,32 +35,30 @@ const List = () => {
     const classes = useStyles();
 
     return (
-      <GenericTemplate title="商品ページ">
         <TableContainer component={Paper}>
-          <Table className={classes.table} aria-label="simple table">
+            <Table className={classes.table} aria-label="simple table">
             <TableHead>
-              <TableRow>
+                <TableRow>
                 <TableCell>商品名</TableCell>
                 <TableCell align="right">カテゴリー</TableCell>
                 <TableCell align="right">重量(g)</TableCell>
                 <TableCell align="right">価格(円)</TableCell>
-              </TableRow>
+                </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
+                {rows.map((row) => (
                 <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
+                    <TableCell component="th" scope="row">
                     {row.name}
-                  </TableCell>
-                  <TableCell align="right">{row.category}</TableCell>
-                  <TableCell align="right">{row.weight}</TableCell>
-                  <TableCell align="right">{row.price}</TableCell>
+                    </TableCell>
+                    <TableCell align="right">{row.category}</TableCell>
+                    <TableCell align="right">{row.weight}</TableCell>
+                    <TableCell align="right">{row.price}</TableCell>
                 </TableRow>
-              ))}
+                ))}
             </TableBody>
-          </Table>
+            </Table>
         </TableContainer>
-      </GenericTemplate>
     );
   };
 
