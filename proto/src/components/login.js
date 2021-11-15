@@ -28,8 +28,8 @@ export default function Login() {
                 name="password"
                 type="password"
                 autoComplete="current-password"
-                autoFocus
             />
+
 
         </Box>
 
