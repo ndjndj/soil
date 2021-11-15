@@ -19,6 +19,18 @@ export default function Login() {
                 autoFocus
             />
 
+            <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="password"
+                label="Password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                autoFocus
+            />
+
         </Box>
 
     );
