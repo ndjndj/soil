@@ -11,23 +11,24 @@ export default function CreateIssue() {
     return(
         <React.Fragment>
             <Header />
-            <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <TextField/>
+            <form>
+                <Grid container spacing={3}>
+                    <Grid item xs={12}>
+                        <TextField variant='outlined' label='code'/>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField variant='outlined' label='name' />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField variant='outlined' label='issue' />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Button color='primary' variant='contained'>
+                            Create
+                        </Button>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12}>
-                    <TextField/>
-                </Grid>
-                <Grid item xs={12}>
-                    <TextField/>
-                </Grid>
-                <Grid item xs={12}>
-                    <Button color='primary' variant='contained'>
-                        Create
-                    </Button>
-                </Grid>
-            </Grid>
-
+            </form>
         </React.Fragment>
     );
 
