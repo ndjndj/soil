@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Header from '../components/header';
+import Typography from '@material-ui/core/Typography';
 
 export default function CreateIssue() {
 
@@ -13,6 +14,9 @@ export default function CreateIssue() {
             <Header />
             <form>
                 <Grid container spacing={3}>
+                    <Grid item xs={12}>
+                        <TextField variant='outlined' label='code'/>
+                    </Grid>
                     <Grid item xs={12}>
                         <TextField variant='outlined' label='code'/>
                     </Grid>
