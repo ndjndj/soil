@@ -15,7 +15,9 @@ export default function CreateIssue() {
             <form>
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
-                        <TextField variant='outlined' label='code'/>
+                        <Typography variant='h3' component='h1' color='textPrimary'>
+                            Create Issue
+                        </ Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <TextField variant='outlined' label='code'/>
