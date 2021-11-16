@@ -9,10 +9,15 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-        margin: '2% 25%'
+        margin: '2% 10%',
+        flexGrow: 1
     },
     container: {
         margin: 'auto',
+    },
+    button: {
+
+        width: '20%'
     }
 });
 
@@ -39,8 +44,8 @@ export default function CreateIssue() {
                         <Grid item xs={12}>
                             <TextField variant='outlined' label='issue' />
                         </Grid>
-                        <Grid item xs={12}>
-                            <Button color='primary' variant='contained'>
+                        <Grid item xs={12} >
+                            <Button color='primary' variant='contained' className={classes.button}>
                                 Create
                             </Button>
                         </Grid>
