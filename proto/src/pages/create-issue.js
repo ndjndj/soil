@@ -29,22 +29,22 @@ export default function CreateIssue() {
             <Header />
             <Paper className={classes.root}>
                 <form>
-                    <Grid container alignItems='center' justify='center'>
-                        <Grid item xs={12}>
+                    <Grid container alignItems='center' justify='center' direction='column'>
+                        <Grid item>
                             <Typography variant='h3' component='h1' color='textPrimary'>
                                 Create Issue
                             </ Typography>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item>
                             <TextField variant='outlined' label='code' fullWidth />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item>
                             <TextField variant='outlined' label='name' />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item>
                             <TextField variant='outlined' label='issue' />
                         </Grid>
-                        <Grid item xs={12} >
+                        <Grid item>
                             <Button color='primary' variant='contained' className={classes.button}>
                                 Create
                             </Button>
