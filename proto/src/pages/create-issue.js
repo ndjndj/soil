@@ -7,12 +7,20 @@ import TextField from '@material-ui/core/TextField';
 import Header from '../components/header';
 import Typography from '@material-ui/core/Typography';
 
+const useStyles = makeStyles({
+    root: {
+        flexgrow: 1,
+        overflow: 'scroll'
+    }
+});
+
+
 export default function CreateIssue() {
     const classes = useStyles();
     return(
         <React.Fragment>
             <Header />
-            <form>
+            <form >
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <Typography variant='h3' component='h1' color='textPrimary'>
