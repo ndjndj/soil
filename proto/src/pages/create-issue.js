@@ -13,7 +13,18 @@ export default function CreateIssue() {
             <Header />
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-
+                    <TextField/>
+                </Grid>
+                <Grid item xs={12}>
+                    <TextField/>
+                </Grid>
+                <Grid item xs={12}>
+                    <TextField/>
+                </Grid>
+                <Grid item xs={12}>
+                    <Button color='primary' variant='contained'>
+                        Create
+                    </Button>
                 </Grid>
             </Grid>
 
