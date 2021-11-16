@@ -16,6 +16,9 @@ const useStyles = makeStyles({
     },
     center: {
         textAlign: 'center',
+    },
+    row: {
+        margin: '0 12% 0 12%'
     }
 });
 
@@ -43,16 +46,16 @@ export default function CreateIssue() {
                                 Create Issue
                             </ Typography>
                         </Grid>
-                        <Grid item  xs={12}>
+                        <Grid item  xs={12} className={classes.row}>
                             <TextField variant='outlined' label='code' fullWidth />
                         </Grid>
-                        <Grid item  xs={12}>
+                        <Grid item  xs={12} className={classes.row}>
                             <TextField variant='outlined' label='name' fullWidth />
                         </Grid>
-                        <Grid item xs={12} >
+                        <Grid item xs={12}  className={classes.row}>
                             <TextField variant='outlined' label='issue' fullWidth/>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12}  className={classes.center}>
                             <Button color='primary' variant='contained'>
                                 Create
                             </Button>
