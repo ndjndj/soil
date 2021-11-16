@@ -30,7 +30,6 @@ export default function CreateIssue() {
                         spacing={3}
                         alignItems='center'
                         justify='center'
-                        direction='column'
                     >
                         <Grid item  xs={12}>
                             <Typography
@@ -46,7 +45,7 @@ export default function CreateIssue() {
                             <TextField variant='outlined' label='code' fullWidth />
                         </Grid>
                         <Grid item  xs={12}>
-                            <TextField variant='outlined' label='name' />
+                            <TextField variant='outlined' label='name' fullWidth />
                         </Grid>
                         <Grid item xs={12} >
                             <TextField variant='outlined' label='issue' fullWidth/>
