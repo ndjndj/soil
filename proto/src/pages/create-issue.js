@@ -15,10 +15,6 @@ const useStyles = makeStyles({
     container: {
         margin: 'auto',
     },
-    button: {
-
-        width: '20%'
-    }
 });
 
 
@@ -51,7 +47,7 @@ export default function CreateIssue() {
                             <TextField variant='outlined' label='issue' />
                         </Grid>
                         <Grid item>
-                            <Button color='primary' variant='contained' className={classes.button}>
+                            <Button color='primary' variant='contained'>
                                 Create
                             </Button>
                         </Grid>
