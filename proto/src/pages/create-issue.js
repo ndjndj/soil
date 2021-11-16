@@ -8,7 +8,7 @@ import Header from '../components/header';
 import Typography from '@material-ui/core/Typography';
 
 export default function CreateIssue() {
-
+    const classes = useStyles();
     return(
         <React.Fragment>
             <Header />
