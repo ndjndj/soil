@@ -29,7 +29,13 @@ export default function CreateIssue() {
             <Header />
             <Paper className={classes.root}>
                 <form>
-                    <Grid container alignItems='center' justify='center' direction='column'>
+                    <Grid
+                        container
+                        spacing={3}
+                        alignItems='center'
+                        justify='center'
+                        direction='column'
+                    >
                         <Grid item>
                             <Typography variant='h3' component='h1' color='textPrimary'>
                                 Create Issue
