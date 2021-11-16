@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box'
+import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -9,8 +9,10 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-        flexgrow: 1,
-        overflow: 'scroll'
+        margin: '2% 25%'
+    },
+    container: {
+        margin: 'auto',
     }
 });
 
@@ -20,8 +22,8 @@ export default function CreateIssue() {
     return(
         <React.Fragment>
             <Header />
-            <form >
-                <Grid container spacing={3}>
+            <form className={classes.root}>
+                <Grid container spacing={3} className={classes.container}>
                     <Grid item xs={12}>
                         <Typography variant='h3' component='h1' color='textPrimary'>
                             Create Issue
