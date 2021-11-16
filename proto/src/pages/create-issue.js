@@ -32,21 +32,26 @@ export default function CreateIssue() {
                         justify='center'
                         direction='column'
                     >
-                        <Grid item>
-                            <Typography variant='h3' component='h1' color='textPrimary'>
+                        <Grid item  xs={12}>
+                            <Typography
+                                variant='h3'
+                                component='h1'
+                                color='textPrimary'
+                                justify='center'
+                            >
                                 Create Issue
                             </ Typography>
                         </Grid>
-                        <Grid item>
+                        <Grid item  xs={12}>
                             <TextField variant='outlined' label='code' fullWidth />
                         </Grid>
-                        <Grid item>
+                        <Grid item  xs={12}>
                             <TextField variant='outlined' label='name' />
                         </Grid>
-                        <Grid item>
-                            <TextField variant='outlined' label='issue' />
+                        <Grid item xs={12} >
+                            <TextField variant='outlined' label='issue' fullWidth/>
                         </Grid>
-                        <Grid item>
+                        <Grid item xs={12}>
                             <Button color='primary' variant='contained'>
                                 Create
                             </Button>
