@@ -5,21 +5,12 @@ import SimpleCard from "./components/card";
 import { Container } from "@material-ui/core";
 import ListItem from "./components/listItem";
 import Login from "./components/login";
+import CreateIssue from "./pages/create-issue";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-
-      <Login />
-
-      <Container>
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
-      </Container>
-
+      <CreateIssue />
     </div>
   );
 }
