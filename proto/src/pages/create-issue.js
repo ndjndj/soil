@@ -22,29 +22,32 @@ export default function CreateIssue() {
     return(
         <React.Fragment>
             <Header />
-            <form className={classes.root}>
-                <Grid container spacing={3} className={classes.container}>
-                    <Grid item xs={12}>
-                        <Typography variant='h3' component='h1' color='textPrimary'>
-                            Create Issue
-                        </ Typography>
+            <Paper className={classes.root}>
+                <form >
+                    <Grid container spacing={3} className={classes.container}>
+                        <Grid item xs={12}>
+                            <Typography variant='h3' component='h1' color='textPrimary'>
+                                Create Issue
+                            </ Typography>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField variant='outlined' label='code'/>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField variant='outlined' label='name' />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField variant='outlined' label='issue' />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Button color='primary' variant='contained'>
+                                Create
+                            </Button>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12}>
-                        <TextField variant='outlined' label='code'/>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <TextField variant='outlined' label='name' />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <TextField variant='outlined' label='issue' />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Button color='primary' variant='contained'>
-                            Create
-                        </Button>
-                    </Grid>
-                </Grid>
-            </form>
+                </form>
+            </Paper>
+
         </React.Fragment>
     );
 
