@@ -38,7 +38,6 @@ export default function CreateIssue() {
                                 variant='h3'
                                 component='h1'
                                 color='textPrimary'
-                                justify='center'
                                 className={classes.center}
                             >
                                 Create Issue
