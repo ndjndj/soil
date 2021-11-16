@@ -10,11 +10,13 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
     root: {
         margin: '2% 10%',
-        flexGrow: 1
     },
     container: {
         margin: 'auto',
     },
+    center: {
+        textAlign: 'center',
+    }
 });
 
 
@@ -37,6 +39,7 @@ export default function CreateIssue() {
                                 component='h1'
                                 color='textPrimary'
                                 justify='center'
+                                className={classes.center}
                             >
                                 Create Issue
                             </ Typography>
