@@ -8,11 +8,10 @@ import Header from '../components/header';
 export default function CreateIssue() {
 
     return(
-
-        <div>
-
-        </div>
-
+        <React.Fragment>
+            <Header />
+        
+        </React.Fragment>
     );
 
 }

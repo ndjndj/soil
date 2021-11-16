@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-  export default function Header() {
+  export default function Header(props) {
     const classes = useStyles();
 
     return (
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              News
+              Project Soil
             </Typography>
             <Button color="inherit">Login</Button>
           </Toolbar>
