@@ -28,15 +28,15 @@ export default function CreateIssue() {
         <React.Fragment>
             <Header />
             <Paper className={classes.root}>
-                <form >
-                    <Grid container spacing={3} className={classes.container}>
+                <form>
+                    <Grid container alignItems='center' justify='center'>
                         <Grid item xs={12}>
                             <Typography variant='h3' component='h1' color='textPrimary'>
                                 Create Issue
                             </ Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField variant='outlined' label='code'/>
+                            <TextField variant='outlined' label='code' fullWidth />
                         </Grid>
                         <Grid item xs={12}>
                             <TextField variant='outlined' label='name' />
