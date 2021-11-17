@@ -6,10 +6,13 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Header from '../components/header';
 import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles({
     root: {
         margin: '2% 10%',
+        justifyContent: 'center',
+        maxWidth: '800px'
     },
     container: {
         margin: 'auto',
