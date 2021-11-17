@@ -10,7 +10,7 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles({
     root: {
-        margin: '2% 10%'
+        margin: '8% 10%'
     },
     container: {
         margin: 'auto',
@@ -29,7 +29,7 @@ export default function CreateIssue() {
     return(
         <React.Fragment>
             <Header />
-            <Container fixed>
+            <Container maxWidth='lg'>
                 <Paper className={classes.root}>
                     <form>
                         <Grid
