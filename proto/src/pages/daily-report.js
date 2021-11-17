@@ -26,6 +26,7 @@ export default function DailyReport() {
             let file = files[0];
             console.log(file.name);
             console.log(file);
+
         }
     }
 
@@ -33,6 +34,8 @@ export default function DailyReport() {
     return(
         <React.Fragment>
             <Header />
+            
+            <Tabs></Tabs>
             <Container maxWidth='lg'>
                 <SimpleMDE events={{'drop': handleDrop}} />
             </Container>
