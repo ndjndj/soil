@@ -10,6 +10,7 @@ import Container from '@material-ui/core/Container';
 import Tabs from '@material-ui/core/Tabs';
 import SimpleMDE from 'react-simplemde-editor';
 import 'easymde/dist/easymde.min.css';
+import Tab from '@mui/material/Tab';
 
 const useStyles = makeStyles({
 
@@ -34,8 +35,10 @@ export default function DailyReport() {
     return(
         <React.Fragment>
             <Header />
-            
-            <Tabs></Tabs>
+
+            <Tabs>
+
+            </Tabs>
             <Container maxWidth='lg'>
                 <SimpleMDE events={{'drop': handleDrop}} />
             </Container>
