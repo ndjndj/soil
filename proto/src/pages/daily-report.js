@@ -34,7 +34,7 @@ export default function DailyReport() {
         <React.Fragment>
             <Header />
             <Container maxWidth='lg'>
-                <SimpleMDE />
+                <SimpleMDE events={{'drop': handleDrop}} />
             </Container>
         </React.Fragment>
     );
