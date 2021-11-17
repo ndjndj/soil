@@ -13,12 +13,12 @@ const useStyles = makeStyles({
 });
 
 
-export default function CreateIssue() {
+export default function DailyReport() {
     const classes = useStyles();
     return(
         <React.Fragment>
             <Header />
-            
+
         </React.Fragment>
     );
 }
