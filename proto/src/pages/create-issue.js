@@ -68,5 +68,4 @@ export default function CreateIssue() {
             </Container>
         </React.Fragment>
     );
-
 }
