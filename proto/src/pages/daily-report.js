@@ -20,6 +20,15 @@ export default function DailyReport() {
 
     const [markdown, setMarkdown] = useState('');
 
+    function handleDrop(data, e) {
+        let files = e.dataTransfer.files;
+        if (files.length > 0) {
+            let file = files[0];
+            console.log(file.name);
+            console.log(file);
+        }
+    }
+
     const classes = useStyles();
     return(
         <React.Fragment>
