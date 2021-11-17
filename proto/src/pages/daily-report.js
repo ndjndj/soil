@@ -8,7 +8,8 @@ import Header from '../components/header';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Tabs from '@material-ui/core/Tabs';
-
+import SimpleMDE from 'react-simplemde-editor';
+import 'easymde/dist/easymde.min.css';
 
 const useStyles = makeStyles({
 
@@ -21,9 +22,7 @@ export default function DailyReport() {
         <React.Fragment>
             <Header />
             <Container maxWidth='lg'>
-                <Paper>
-                    
-                </Paper>
+                <SimpleMDE />
             </Container>
         </React.Fragment>
     );
