@@ -10,9 +10,7 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles({
     root: {
-        margin: '2% 10%',
-        justifyContent: 'center',
-        maxWidth: '800px'
+        margin: '2% 10%'
     },
     container: {
         margin: 'auto',
@@ -31,42 +29,43 @@ export default function CreateIssue() {
     return(
         <React.Fragment>
             <Header />
-            <Paper className={classes.root}>
-                <form>
-                    <Grid
-                        container
-                        spacing={3}
-                        alignItems='center'
-                        justify='center'
-                    >
-                        <Grid item  xs={12}>
-                            <Typography
-                                variant='h3'
-                                component='h1'
-                                color='textPrimary'
-                                className={classes.center}
-                            >
-                                Create Issue
-                            </ Typography>
+            <Container fixed>
+                <Paper className={classes.root}>
+                    <form>
+                        <Grid
+                            container
+                            spacing={3}
+                            alignItems='center'
+                            justify='center'
+                        >
+                            <Grid item  xs={12}>
+                                <Typography
+                                    variant='h3'
+                                    component='h1'
+                                    color='textPrimary'
+                                    className={classes.center}
+                                >
+                                    Create Issue
+                                </ Typography>
+                            </Grid>
+                            <Grid item  xs={12} className={classes.row}>
+                                <TextField variant='outlined' label='code' fullWidth />
+                            </Grid>
+                            <Grid item  xs={12} className={classes.row}>
+                                <TextField variant='outlined' label='name' fullWidth />
+                            </Grid>
+                            <Grid item xs={12}  className={classes.row}>
+                                <TextField variant='outlined' label='issue' fullWidth/>
+                            </Grid>
+                            <Grid item xs={12}  className={classes.center}>
+                                <Button color='primary' variant='contained'>
+                                    Create
+                                </Button>
+                            </Grid>
                         </Grid>
-                        <Grid item  xs={12} className={classes.row}>
-                            <TextField variant='outlined' label='code' fullWidth />
-                        </Grid>
-                        <Grid item  xs={12} className={classes.row}>
-                            <TextField variant='outlined' label='name' fullWidth />
-                        </Grid>
-                        <Grid item xs={12}  className={classes.row}>
-                            <TextField variant='outlined' label='issue' fullWidth/>
-                        </Grid>
-                        <Grid item xs={12}  className={classes.center}>
-                            <Button color='primary' variant='contained'>
-                                Create
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </form>
-            </Paper>
-
+                    </form>
+                </Paper>
+            </Container>
         </React.Fragment>
     );
 
