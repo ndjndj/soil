@@ -6,11 +6,12 @@ import { Container } from "@material-ui/core";
 import ListItem from "./components/listItem";
 import Login from "./components/login";
 import CreateIssue from "./pages/create-issue";
+import DailyReport from "./pages/daily-report";
 
 function App() {
   return (
     <div className="App">
-      <CreateIssue />
+      <DailyReport />
     </div>
   );
 }
