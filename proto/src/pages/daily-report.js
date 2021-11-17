@@ -7,6 +7,8 @@ import TextField from '@material-ui/core/TextField';
 import Header from '../components/header';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Tabs from '@material-ui/core/Tabs';
+
 
 const useStyles = makeStyles({
 
@@ -18,7 +20,11 @@ export default function DailyReport() {
     return(
         <React.Fragment>
             <Header />
-
+            <Container maxWidth='lg'>
+                <Paper>
+                    
+                </Paper>
+            </Container>
         </React.Fragment>
     );
 }
