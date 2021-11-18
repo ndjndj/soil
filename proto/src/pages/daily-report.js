@@ -54,7 +54,7 @@ function allyProps(index) {
 export default function DailyReport() {
 
     const [markdown, setMarkdown] = useState('');
-
+    const [value, setValue] = useState(0);
     function handleDrop(data, e) {
         let files = e.dataTransfer.files;
         if (files.length > 0) {
