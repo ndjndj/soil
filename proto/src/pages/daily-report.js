@@ -75,8 +75,19 @@ export default function DailyReport() {
             <Header />
 
             <Tabs>
-                
+                <Tab label='one' {...allyProps(0) } />
+                <Tab label='two' {...allyProps(1) } />
+                <Tab label='three' {...allyProps(2) } />
             </Tabs>
+            <TabPanel value={value} index={0}>
+                Item One
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+                Item Two
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+                Item Three
+            </TabPanel>
             <Container maxWidth='lg'>
                 <SimpleMDE events={{'drop': handleDrop}} />
             </Container>
