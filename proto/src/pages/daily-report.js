@@ -55,7 +55,7 @@ export default function DailyReport() {
 
     const [markdown, setMarkdown] = useState('');
     const [value, setValue] = useState(0);
-    function handleChange(newValue, e) {
+    function handleChange(e, newValue) {
         setValue(newValue);
     }
 
