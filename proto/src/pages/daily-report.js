@@ -10,7 +10,7 @@ import Container from '@material-ui/core/Container';
 import Tabs from '@material-ui/core/Tabs';
 import SimpleMDE from 'react-simplemde-editor';
 import 'easymde/dist/easymde.min.css';
-import Tab from '@mui/material/Tab';
+import Tab from '@material-ui/core/Tab';
 
 const useStyles = makeStyles({
 
