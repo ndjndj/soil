@@ -80,17 +80,21 @@ export default function DailyReport() {
                 <Tab label='three' {...allyProps(2) } />
             </Tabs>
             <TabPanel value={value} index={0}>
-                Item One
+                <Container maxWidth='lg'>
+                    <SimpleMDE events={{'drop': handleDrop}} />
+                </Container>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Item Two
+                <Container maxWidth='lg'>
+                    <SimpleMDE events={{'drop': handleDrop}} />
+                </Container>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                Item Three
+                <Container maxWidth='lg'>
+                    <SimpleMDE events={{'drop': handleDrop}} />
+                </Container>
             </TabPanel>
-            <Container maxWidth='lg'>
-                <SimpleMDE events={{'drop': handleDrop}} />
-            </Container>
+
         </React.Fragment>
     );
 }
