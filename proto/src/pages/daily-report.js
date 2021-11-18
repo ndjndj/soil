@@ -55,6 +55,10 @@ export default function DailyReport() {
 
     const [markdown, setMarkdown] = useState('');
     const [value, setValue] = useState(0);
+    function handleChange(newValue, e) {
+        setValue(newValue);
+    }
+
     function handleDrop(data, e) {
         let files = e.dataTransfer.files;
         if (files.length > 0) {
@@ -71,7 +75,7 @@ export default function DailyReport() {
             <Header />
 
             <Tabs>
-
+                
             </Tabs>
             <Container maxWidth='lg'>
                 <SimpleMDE events={{'drop': handleDrop}} />
