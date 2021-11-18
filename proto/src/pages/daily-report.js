@@ -43,7 +43,12 @@ TabPanel.propTypes = {
     value: PropTypes.number.isRequired,
 }
 
-
+function allyProps(index) {
+    return {
+        id: `full-width-tab-${index}`,
+        'aria-controls': `full-width-tabpanel-${index}`,
+    }
+}
 
 export default function DailyReport() {
 
