@@ -37,6 +37,14 @@ function TabPanel(props) {
     );
 }
 
+TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+}
+
+
+
 export default function DailyReport() {
 
     const [markdown, setMarkdown] = useState('');
