@@ -46,21 +46,18 @@ export default function Login() {
                                     color='textPrimary'
                                     className={classes.center}
                                 >
-                                    Create Issue
+                                    Login
                                 </ Typography>
                             </Grid>
                             <Grid item  xs={12} className={classes.row}>
-                                <TextField variant='outlined' label='code' fullWidth />
-                            </Grid>
-                            <Grid item  xs={12} className={classes.row}>
-                                <TextField variant='outlined' label='name' fullWidth />
+                                <TextField variant='outlined' label='id' fullWidth />
                             </Grid>
                             <Grid item xs={12}  className={classes.row}>
-                                <TextField variant='outlined' label='issue' fullWidth/>
+                                <TextField variant='outlined' label='password' fullWidth/>
                             </Grid>
                             <Grid item xs={12}  className={classes.center}>
                                 <Button color='primary' variant='contained'>
-                                    Create
+                                    Login
                                 </Button>
                             </Grid>
                         </Grid>
@@ -68,4 +65,5 @@ export default function Login() {
                 </Paper>
             </Container>
         </React.Fragment>
+    );
 }
