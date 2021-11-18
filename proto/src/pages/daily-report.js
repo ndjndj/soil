@@ -12,6 +12,7 @@ import SimpleMDE from 'react-simplemde-editor';
 import 'easymde/dist/easymde.min.css';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles({
 
@@ -29,7 +30,7 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{p: 3}}>
+                <Box p={3}>
                         <Typography>{children}</Typography>
                 </Box>
             )}
