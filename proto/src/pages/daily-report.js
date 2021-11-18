@@ -13,6 +13,8 @@ import 'easymde/dist/easymde.min.css';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
+import Icon from '@material-ui/core/Icon';
+import Add from '@material-ui/icons/Add';
 
 const useStyles = makeStyles({
 
