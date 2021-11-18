@@ -31,7 +31,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box p={3}>
-                        <Typography>{children}</Typography>
+                        <React.Fragment>{children}</React.Fragment>
                 </Box>
             )}
         </div>
