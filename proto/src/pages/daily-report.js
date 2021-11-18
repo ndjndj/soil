@@ -74,7 +74,7 @@ export default function DailyReport() {
         <React.Fragment>
             <Header />
 
-            <Tabs>
+            <Tabs value={value} onChange={handleChange} aria-label='simple tab example'>
                 <Tab label='one' {...allyProps(0) } />
                 <Tab label='two' {...allyProps(1) } />
                 <Tab label='three' {...allyProps(2) } />
