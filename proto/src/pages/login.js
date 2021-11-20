@@ -30,6 +30,7 @@ export default function Login() {
     return(
         <React.Fragment>
             <Header />
+            <Typography variant='h2' component='h1'>Login</Typography>
             <Container maxWidth='lg'>
                 <Paper className={classes.root}>
                     <form>
