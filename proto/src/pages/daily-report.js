@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 });
 
-function allyProps(index) {
+function a11yProps(index) {
     return {
         id: `full-width-tab-${index}`,
         'aria-controls': `full-width-tabpanel-${index}`,
@@ -52,9 +52,9 @@ export default function DailyReport() {
             <Header />
 
             <Tabs value={value} onChange={handleChange} aria-label='simple tab example'>
-                <Tab label='one' {...allyProps(0) } />
-                <Tab label='two' {...allyProps(1) } />
-                <Tab label='three' {...allyProps(2) } />
+                <Tab label='one' {...a11yProps(0) } />
+                <Tab label='two' {...a11yProps(1) } />
+                <Tab label='three' {...a11yProps(2) } />
             </Tabs>
 
             <TabPanel value={value} index={0}>
