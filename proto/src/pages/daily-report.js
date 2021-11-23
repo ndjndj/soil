@@ -15,36 +15,11 @@ import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 import Icon from '@material-ui/core/Icon';
 import Add from '@material-ui/icons/Add';
+import TabPanel from '../components/tab-panel';
 
 const useStyles = makeStyles({
 
 });
-
-function TabPanel(props) {
-    const {children, value, index, ...other} = props;
-
-    return (
-        <div
-            role='tabpanel'
-            hidden={value !== index}
-            id={`full-width-tabpanel-${index}`}
-            aria-labelledby={`full-width-tab-${index}`}
-            {...other}
-        >
-            {value === index && (
-                <Box p={3}>
-                        <React.Fragment>{children}</React.Fragment>
-                </Box>
-            )}
-        </div>
-    );
-}
-
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-}
 
 function allyProps(index) {
     return {
@@ -80,7 +55,6 @@ export default function DailyReport() {
                 <Tab label='one' {...allyProps(0) } />
                 <Tab label='two' {...allyProps(1) } />
                 <Tab label='three' {...allyProps(2) } />
-                <Icon><Add/></Icon>
             </Tabs>
 
             <TabPanel value={value} index={0}>

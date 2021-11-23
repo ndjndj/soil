@@ -11,7 +11,7 @@ import DailyReport from "./pages/daily-report";
 function App() {
   return (
     <div className="App">
-      <Login/>
+      <DailyReport/>
     </div>
   );
 }
