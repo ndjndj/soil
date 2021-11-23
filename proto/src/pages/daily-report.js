@@ -65,6 +65,11 @@ export default function DailyReport() {
             </TabPanel>
         });
     }
+    function updateTabHead(tabs) {
+        return tabs,map((tabName, i) => {
+            return <Tab label={'tab is ' + String(i)} {...a11yProps(i)} />
+        });
+    }
     const classes = useStyles();
     return(
         <React.Fragment>
