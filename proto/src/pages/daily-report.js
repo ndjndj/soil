@@ -33,12 +33,15 @@ const ButtonInTabs = ({className, onClick, children}) => {
 }
 
 export default function DailyReport() {
-
+    const [tabs, setTabs] = useState([]);
     const [markdown, setMarkdown] = useState('');
     const [value, setValue] = useState(0);
+
     function handleChange(e, newValue) {
         setValue(newValue);
     }
+
+    
 
     function handleDrop(data, e) {
         let files = e.dataTransfer.files;
@@ -59,6 +62,9 @@ export default function DailyReport() {
                 <Tab label='one' {...a11yProps(0) } />
                 <Tab label='two' {...a11yProps(1) } />
                 <Tab label='three' {...a11yProps(2) } />
+                <ButtonInTabs>
+                    NewTab
+                </ButtonInTabs>
             </Tabs>
 
             <TabPanel value={value} index={0}>
