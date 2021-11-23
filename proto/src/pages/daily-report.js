@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid';
@@ -42,8 +42,14 @@ export default function DailyReport() {
     }
 
     function handleClick() {
-        setTabs([...tabs, 'tabs']);
-        setValue(tabs.length-1);
+        new Promise((resolve) => {
+            setTabs([...tabs, 'tabs']);
+        }).then(() => {
+            setValue(tabs.length-1);
+        });
+
+
+        setValue(tabs.length);
         console.log(tabs);
     }
 
