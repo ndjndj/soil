@@ -66,7 +66,7 @@ export default function DailyReport() {
         });
     }
     function updateTabHead(tabs) {
-        return tabs,map((tabName, i) => {
+        return tabs.map((tabName, i) => {
             return <Tab label={'tab is ' + String(i)} {...a11yProps(i)} />
         });
     }
