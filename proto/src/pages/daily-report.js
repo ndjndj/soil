@@ -43,6 +43,7 @@ export default function DailyReport() {
 
     function handleClick() {
         setTabs([...tabs, 'tabs']);
+        setValue(tabs.length-1);
         console.log(tabs);
     }
 
