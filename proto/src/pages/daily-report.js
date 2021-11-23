@@ -81,7 +81,7 @@ export default function DailyReport() {
         <React.Fragment>
             <Header />
 
-            <Tabs value={value} onChange={handleChange} aria-label='simple tab example'>
+            <Tabs value={value} onChange={handleChange} aria-label='simple tab example' variant='scrollable'>
                 {updateTabHead(tabs)}
                 <ButtonInTabs onClick={handleClick}>
                     NewTab
