@@ -28,6 +28,10 @@ function a11yProps(index) {
     }
 }
 
+const ButtonInTabs = ({className, onClick, children}) => {
+    return <Button className={className} onClick={onClick} children={children} />;
+}
+
 export default function DailyReport() {
 
     const [markdown, setMarkdown] = useState('');
