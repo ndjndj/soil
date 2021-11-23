@@ -43,6 +43,7 @@ export default function DailyReport() {
 
     function handleClick() {
         setTabs([...tabs, 'tabs']);
+        console.log(tabs);
     }
 
     function handleDrop(data, e) {
@@ -54,7 +55,15 @@ export default function DailyReport() {
 
         }
     }
-
+    function updateTabList(tabs) {
+        return tabs.map((tabName, i) => {
+            return <TabPanel value={i} index={i}>
+                <Container maxWidth='lg'>
+                    <SimpleMDE events={{'drop': handleDrop}} />
+                </Container>
+            </TabPanel>
+        });
+    }
     const classes = useStyles();
     return(
         <React.Fragment>
@@ -69,21 +78,9 @@ export default function DailyReport() {
                 </ButtonInTabs>
             </Tabs>
 
-            <TabPanel value={value} index={0}>
-                <Container maxWidth='lg'>
-                    <SimpleMDE events={{'drop': handleDrop}} />
-                </Container>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-                <Container maxWidth='lg'>
-                    <SimpleMDE events={{'drop': handleDrop}} />
-                </Container>
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-                <Container maxWidth='lg'>
-                    <SimpleMDE events={{'drop': handleDrop}} />
-                </Container>
-            </TabPanel>
+            <React.Fragment>
+                {updateTabList(tabs)}
+            </React.Fragment>
 
         </React.Fragment>
     );
