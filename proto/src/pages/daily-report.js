@@ -76,9 +76,7 @@ export default function DailyReport() {
             <Header />
 
             <Tabs value={value} onChange={handleChange} aria-label='simple tab example'>
-                <Tab label='one' {...a11yProps(0) } />
-                <Tab label='two' {...a11yProps(1) } />
-                <Tab label='three' {...a11yProps(2) } />
+                {updateTabHead(tabs)}
                 <ButtonInTabs onClick={handleClick}>
                     NewTab
                 </ButtonInTabs>
