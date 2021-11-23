@@ -41,7 +41,9 @@ export default function DailyReport() {
         setValue(newValue);
     }
 
-    
+    function handleClick() {
+        setTabs([...tabs, 'tabs']);
+    }
 
     function handleDrop(data, e) {
         let files = e.dataTransfer.files;
@@ -62,7 +64,7 @@ export default function DailyReport() {
                 <Tab label='one' {...a11yProps(0) } />
                 <Tab label='two' {...a11yProps(1) } />
                 <Tab label='three' {...a11yProps(2) } />
-                <ButtonInTabs>
+                <ButtonInTabs onClick={handleClick}>
                     NewTab
                 </ButtonInTabs>
             </Tabs>
