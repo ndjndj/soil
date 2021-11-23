@@ -58,7 +58,7 @@ export default function DailyReport() {
     }
     function updateTabList(tabs) {
         return tabs.map((tabName, i) => {
-            return <TabPanel value={i} index={i}>
+            return <TabPanel value={value} index={i}>
                 <Container maxWidth='lg'>
                     <SimpleMDE events={{'drop': handleDrop}} />
                 </Container>
