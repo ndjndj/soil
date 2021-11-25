@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import Header from '../components/header';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-
+import axios from 'axios';
 
 const useStyles = makeStyles({
     root: {
@@ -27,10 +27,33 @@ const useStyles = makeStyles({
 
 export default function CreateUser() {
     const classes = useStyles();
+    const handleClick = () => {
+        axios
+        .post(
+            'http://localhost:1337/auth/local/register',
+            {
+                username: 'Strapi user',
+                email: 'user@strapi.io',
+                password: 'strapiPassword',
+            }
+        )
+        .then(
+            response => {
+                console.log('Done!');
+                console.log('User profile', response.data.user);
+                console.log('User token', response.data.jwt);
+            }
+        )
+        .catch(error => {
+            // Handle error.
+                console.log('An error occurred:', error);
+            }
+        );
+    }
     return(
         <React.Fragment>
             <Header />
-            <Typography variant='h2' component='h1'>Login</Typography>
+            <Typography variant='h2' component='h1'>Create</Typography>
             <Container maxWidth='lg'>
                 <Paper className={classes.root}>
                     <form>
