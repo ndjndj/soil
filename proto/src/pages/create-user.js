@@ -80,7 +80,7 @@ export default function CreateUser() {
                                 <TextField variant='outlined' label='password' fullWidth/>
                             </Grid>
                             <Grid item xs={12}  className={classes.center}>
-                                <Button color='primary' variant='contained'>
+                                <Button color='primary' variant='contained' onClick={handleClick}>
                                    Create
                                 </Button>
                             </Grid>
