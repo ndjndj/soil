@@ -7,11 +7,12 @@ import ListItem from "./components/listItem";
 import Login from "./pages/login";
 import CreateIssue from "./pages/create-issue";
 import DailyReport from "./pages/daily-report";
+import CreateUser from "./pages/create-user";
 
 function App() {
   return (
     <div className="App">
-      <DailyReport/>
+      <CreateUser />
     </div>
   );
 }
