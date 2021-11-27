@@ -30,7 +30,7 @@ export default function CreateUser() {
     const [ id, setId ] = useState('');
     const [ password, setPassword ] = useState('');
     const [ email, setEmail ] = useState('');
-    
+
     const handleClick = () => {
         axios
         .post(
@@ -79,6 +79,9 @@ export default function CreateUser() {
                             </Grid>
                             <Grid item  xs={12} className={classes.row}>
                                 <TextField variant='outlined' label='id' fullWidth />
+                            </Grid>
+                            <Grid item xs={12}  className={classes.row}>
+                                <TextField variant='outlined' label='email' fullWidth/>
                             </Grid>
                             <Grid item xs={12}  className={classes.row}>
                                 <TextField variant='outlined' label='password' fullWidth/>
