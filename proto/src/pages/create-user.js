@@ -78,13 +78,31 @@ export default function CreateUser() {
                                 </ Typography>
                             </Grid>
                             <Grid item  xs={12} className={classes.row}>
-                                <TextField variant='outlined' label='id' fullWidth />
+                                <TextField
+                                    variant='outlined'
+                                    label='id'
+                                    fullWidth
+                                    onChange={e => {setId(e.target.value)}}
+                                    value={id}
+                            />
                             </Grid>
                             <Grid item xs={12}  className={classes.row}>
-                                <TextField variant='outlined' label='email' fullWidth/>
+                                <TextField
+                                    variant='outlined'
+                                    label='email'
+                                    fullWidth
+                                    onChange={e => {setEmail(e.target.value)}}
+                                    value={email}
+                            />
                             </Grid>
                             <Grid item xs={12}  className={classes.row}>
-                                <TextField variant='outlined' label='password' fullWidth/>
+                                <TextField
+                                    variant='outlined'
+                                    label='password'
+                                    fullWidth
+                                    onChange={e => {setPassword(e.target.value)}}
+                                    value={password}
+                                />
                             </Grid>
                             <Grid item xs={12}  className={classes.center}>
                                 <Button color='primary' variant='contained' onClick={handleClick}>
