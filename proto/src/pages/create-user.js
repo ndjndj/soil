@@ -29,7 +29,8 @@ export default function CreateUser() {
     const classes = useStyles();
     const [ id, setId ] = useState('');
     const [ password, setPassword ] = useState('');
-
+    const [ email, setEmail ] = useState('');
+    
     const handleClick = () => {
         axios
         .post(
