@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid';
@@ -27,13 +27,16 @@ const useStyles = makeStyles({
 
 export default function CreateUser() {
     const classes = useStyles();
+    const [ id, setId ] = useState('');
+    const [ password, setPassword ] = useState('');
+
     const handleClick = () => {
         axios
         .post(
             'http://localhost:1337/auth/local/register',
             {
-                username: 'Strapi user',
-                email: 'user@strapi.io',
+                username: 'Strapi user2',
+                email: 'user2@strapi.io',
                 password: 'strapiPassword',
             }
         )
