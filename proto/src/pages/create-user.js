@@ -36,9 +36,9 @@ export default function CreateUser() {
         .post(
             'http://localhost:1337/auth/local/register',
             {
-                username: 'Strapi user2',
-                email: 'user2@strapi.io',
-                password: 'strapiPassword',
+                username: id,
+                email: email,
+                password: password,
             }
         )
         .then(
