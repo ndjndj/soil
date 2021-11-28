@@ -29,7 +29,26 @@ export default function Login() {
     const classes = useStyles();
 
     function handleClick() {
-
+        axios
+        .post(
+            'http://localhost:1337/auth/local',
+            {
+                identifier: 'administrator',
+                password: 'administrator',
+            }
+        )
+        .then(
+            response => {
+                console.log('done!');
+                console.log('User profile', response.data.user);
+                console.log('User token', response.data.jwt);
+            }
+        )
+        .catch(
+            error => {
+                console.log('An error occurred:', error);
+            }
+        );
     }
 
     return(
