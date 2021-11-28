@@ -12,7 +12,7 @@ import CreateUser from "./pages/create-user";
 function App() {
   return (
     <div className="App">
-      <CreateUser />
+      <Login />
     </div>
   );
 }
