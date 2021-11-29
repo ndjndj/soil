@@ -33,8 +33,8 @@ export default function Login() {
         .post(
             'http://localhost:1337/auth/local',
             {
-                identifier: 'administrator',
-                password: 'administrator',
+                identifier: 'admin@admin.com',
+                password: 'administrator__',
             }
         )
         .then(
@@ -81,7 +81,7 @@ export default function Login() {
                                 <TextField variant='outlined' label='password' fullWidth/>
                             </Grid>
                             <Grid item xs={12}  className={classes.center}>
-                                <Button color='primary' variant='contained'>
+                                <Button color='primary' variant='contained' onClick={handleClick}>
                                     Login
                                 </Button>
                             </Grid>

@@ -17,6 +17,7 @@ import Icon from '@material-ui/core/Icon';
 import Add from '@material-ui/icons/Add';
 import TabPanel from '../components/tab-panel';
 
+
 const useStyles = makeStyles({
 
 });
@@ -53,6 +54,9 @@ export default function DailyReport() {
         console.log(tabs);
     }
 
+    function handleOnDoubleClick() {
+        console.log('On double click');
+    }
     function handleDrop(data, e) {
         let files = e.dataTransfer.files;
         if (files.length > 0) {
@@ -73,7 +77,9 @@ export default function DailyReport() {
     }
     function updateTabHead(tabs) {
         return tabs.map((tabName, i) => {
-            return <Tab label={'tab is ' + String(i)} {...a11yProps(i)} />
+            return <Tab
+                onDoubleClick={handleOnDoubleClick}
+                label={'tab is ' + String(i)} {...a11yProps(i)} />
         });
     }
     const classes = useStyles();
