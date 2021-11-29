@@ -7,11 +7,27 @@ import TextField from '@material-ui/core/TextField';
 import Header from '../components/header';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Modal from '@material-ui/core/Modal';
 
 export default function InputModal() {
-    return(
-        <React.Fragment>
+    const [open, setOpen] = useState(false);
 
-        </React.Fragment>
+    const handleOpen = () => {
+        setOpen(true);
+    }
+
+    const handleClose = () => {
+        setOpen(false);
+    }
+
+    return(
+        <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+        >
+            <Typography>aaaa</Typography>
+        </Modal>
     )
 }
