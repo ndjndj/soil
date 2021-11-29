@@ -37,7 +37,8 @@ export default function DailyReport() {
     const [tabs, setTabs] = useState([]);
     const [markdown, setMarkdown] = useState('');
     const [value, setValue] = useState(0);
-
+    const [tabNames, setTabNames] = useState([]);
+    
     function handleChange(e, newValue) {
         setValue(newValue);
     }
