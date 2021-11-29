@@ -16,7 +16,7 @@ import PropTypes from 'prop-types';
 import Icon from '@material-ui/core/Icon';
 import Add from '@material-ui/icons/Add';
 import TabPanel from '../components/tab-panel';
-
+import InputModal from '../components/input-modal';
 
 const useStyles = makeStyles({
 
@@ -38,7 +38,7 @@ export default function DailyReport() {
     const [markdown, setMarkdown] = useState('');
     const [value, setValue] = useState(0);
     const [tabNames, setTabNames] = useState([]);
-    
+
     function handleChange(e, newValue) {
         setValue(newValue);
     }
@@ -57,6 +57,7 @@ export default function DailyReport() {
 
     function handleOnDoubleClick() {
         console.log('On double click');
+        return <InputModal open={true} />
     }
     function handleDrop(data, e) {
         let files = e.dataTransfer.files;
