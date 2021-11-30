@@ -92,7 +92,7 @@ export default function DailyReport() {
     return(
         <React.Fragment>
             <Header />
-
+            <InputModal open={open} onClose={handleClose} />
             <Tabs value={value} onChange={handleChange} aria-label='simple tab example' variant='scrollable'>
                 {updateTabHead(tabs)}
                 <ButtonInTabs onClick={handleClick}>
@@ -103,7 +103,7 @@ export default function DailyReport() {
             <React.Fragment>
                 {updateTabList(tabs)}
             </React.Fragment>
-            <InputModal open={open} onClose={handleClose} />
+
         </React.Fragment>
     );
 }
