@@ -56,6 +56,9 @@ export default function DailyReport() {
         console.log(tabs);
     }
 
+    function handleClose() {
+        setOpen(false);
+    }
     function handleOnDoubleClick() {
         console.log('On double click');
         setOpen(true);
@@ -100,7 +103,7 @@ export default function DailyReport() {
             <React.Fragment>
                 {updateTabList(tabs)}
             </React.Fragment>
-            <InputModal open={open} />
+            <InputModal open={open} onClose={handleClose} />
         </React.Fragment>
     );
 }
