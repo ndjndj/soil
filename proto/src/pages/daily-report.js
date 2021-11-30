@@ -58,8 +58,7 @@ export default function DailyReport() {
 
     function handleOnDoubleClick() {
         console.log('On double click');
-
-        return
+        setOpen(true);
     }
     function handleDrop(data, e) {
         let files = e.dataTransfer.files;
@@ -101,7 +100,7 @@ export default function DailyReport() {
             <React.Fragment>
                 {updateTabList(tabs)}
             </React.Fragment>
-            <InputModal open={} />
+            <InputModal open={open} />
         </React.Fragment>
     );
 }
