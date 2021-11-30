@@ -39,6 +39,7 @@ export default function DailyReport() {
     const [value, setValue] = useState(0);
     const [tabNames, setTabNames] = useState([]);
     const [open, setOpen] = useState(false);
+
     function handleChange(e, newValue) {
         setValue(newValue);
     }
@@ -57,7 +58,8 @@ export default function DailyReport() {
 
     function handleOnDoubleClick() {
         console.log('On double click');
-        return <InputModal open={true} />
+
+        return
     }
     function handleDrop(data, e) {
         let files = e.dataTransfer.files;
@@ -99,7 +101,7 @@ export default function DailyReport() {
             <React.Fragment>
                 {updateTabList(tabs)}
             </React.Fragment>
-
+            <InputModal open={} />
         </React.Fragment>
     );
 }
