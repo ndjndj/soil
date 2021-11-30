@@ -9,17 +9,26 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Modal from '@material-ui/core/Modal';
 
+const useStyles = makeStyles({
+    root: {
+        width: '100px',
+        height: '100px',
+    }
+});
+
+
 export default function InputModal(props) {
     const { open, handleClose } = props;
-
+    const classes = useStyles();
     return(
         <Modal
+            className={classes.root}
             open={open}
             onClose={handleClose}
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
         >
-            <Typography>aaaa</Typography>
+            <TextField className={classes.root} />
         </Modal>
     )
 }
