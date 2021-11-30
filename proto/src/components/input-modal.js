@@ -9,21 +9,13 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Modal from '@material-ui/core/Modal';
 
-export default function InputModal() {
-    const [open, setOpen] = useState(false);
-
-    const handleOpen = () => {
-        setOpen(true);
-    }
-
-    const handleClose = () => {
-        setOpen(false);
-    }
+export default function InputModal(props) {
+    const { open } = props;
 
     return(
         <Modal
             open={open}
-            onClose={handleClose}
+
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
         >
