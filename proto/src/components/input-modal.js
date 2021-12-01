@@ -18,13 +18,13 @@ const useStyles = makeStyles({
 
 
 export default function InputModal(props) {
-    const { open, handleClose } = props;
+    const { open, onClose } = props;
     const classes = useStyles();
     return(
         <Modal
             maxWidth='md'
             open={open}
-            onClose={handleClose}
+            onClose={onClose}
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
         >
