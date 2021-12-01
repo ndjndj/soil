@@ -8,11 +8,11 @@ import Header from '../components/header';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Modal from '@material-ui/core/Modal';
+import { Dialog } from '@material-ui/core';
 
 const useStyles = makeStyles({
     root: {
-        width: '100px',
-        height: '100px',
+        margin: '25% 12% 25% 12%'
     }
 });
 
@@ -22,13 +22,18 @@ export default function InputModal(props) {
     const classes = useStyles();
     return(
         <Modal
-            className={classes.root}
+            maxWidth='md'
             open={open}
             onClose={handleClose}
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
         >
-            <TextField className={classes.root} />
+            <Paper className={classes.root}>
+                <TextField className={classes.root} />
+
+
+            </Paper>
+
         </Modal>
     )
 }
