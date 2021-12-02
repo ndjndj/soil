@@ -59,7 +59,7 @@ export default function DailyReport() {
     function handleClose() {
         setOpen(false);
     }
-    
+
     function handleOnDoubleClick() {
         console.log('On double click');
         setOpen(true);
@@ -102,7 +102,12 @@ export default function DailyReport() {
                 onClose={handleClose}
                 tabName={"tab"}
             />
-            <Tabs value={value} onChange={handleChange} aria-label='simple tab example' variant='scrollable'>
+            <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label='simple tab example'
+                variant='scrollable'
+            >
                 {updateTabHead(tabs)}
                 <ButtonInTabs onClick={handleClick}>
                     NewTab
