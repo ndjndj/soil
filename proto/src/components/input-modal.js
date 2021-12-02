@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 
 export default function InputModal(props) {
-    const { open, onClose, onClick } = props;
+    const { open, onClose, onClick, tabName } = props;
     const classes = useStyles();
     return(
         <Modal
@@ -29,7 +29,7 @@ export default function InputModal(props) {
             aria-describedby="simple-modal-description"
         >
             <Paper className={classes.root}>
-                <TextField className={classes.root} />
+                <TextField className={classes.root} value={tabName} />
 
                 <Button onClick={onClick}>OK</Button>
             </Paper>
