@@ -48,11 +48,15 @@ export default function DailyReport() {
     function handleClick() {
         new Promise((resolve) => {
             setTabInfo({ ...tabInfo, [String(Object.keys(tabInfo).length)]: 'new' });
-        }).then(() => {
-            setValue(Object.keys(tabInfo).length-1);
-        });
+            console.log(Object.keys(tabInfo).length);
 
-        console.log(tabs);
+        }).then(() => {
+            setValue(Object.keys(tabInfo).length);
+            console.log(Object.keys(tabInfo).length);
+
+        });
+        console.log(Object.keys(tabInfo).length);
+        console.log(tabInfo);
     }
 
     function handleClose() {
@@ -76,7 +80,7 @@ export default function DailyReport() {
 
     function updateTabList(tabInfo) {
         return Object.keys(tabInfo).map((value, i) => {
-            return <TabPanel key={i} value={value} index={i}>
+            return <TabPanel key={i} value={i} index={i}>
                 <Container maxWidth='lg'>
                     <SimpleMDE events={{'drop': handleDrop}} />
                 </Container>
