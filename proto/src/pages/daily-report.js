@@ -59,10 +59,12 @@ export default function DailyReport() {
     function handleClose() {
         setOpen(false);
     }
+    
     function handleOnDoubleClick() {
         console.log('On double click');
         setOpen(true);
     }
+
     function handleDrop(data, e) {
         let files = e.dataTransfer.files;
         if (files.length > 0) {
@@ -72,6 +74,7 @@ export default function DailyReport() {
 
         }
     }
+
     function updateTabList(tabs) {
         return tabs.map((tabName, i) => {
             return <TabPanel value={value} index={i}>
@@ -81,6 +84,7 @@ export default function DailyReport() {
             </TabPanel>
         });
     }
+
     function updateTabHead(tabs) {
         return tabs.map((tabName, i) => {
             return <Tab
@@ -88,6 +92,7 @@ export default function DailyReport() {
                 label={'tab is ' + String(i)} {...a11yProps(i)} />
         });
     }
+
     const classes = useStyles();
     return(
         <React.Fragment>
@@ -95,6 +100,7 @@ export default function DailyReport() {
             <InputModal
                 open={open}
                 onClose={handleClose}
+                tabName={"tab"}
             />
             <Tabs value={value} onChange={handleChange} aria-label='simple tab example' variant='scrollable'>
                 {updateTabHead(tabs)}
