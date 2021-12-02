@@ -52,8 +52,6 @@ export default function DailyReport() {
             setValue(Object.keys(tabInfo).length-1);
         });
 
-
-        //setValue(tabs.length);
         console.log(tabs);
     }
 
@@ -111,7 +109,7 @@ export default function DailyReport() {
                 aria-label='simple tab example'
                 variant='scrollable'
             >
-                {updateTabHead(tabs)}
+                {updateTabHead(tabInfo)}
                 <ButtonInTabs onClick={handleClick}>
                     NewTab
                 </ButtonInTabs>
