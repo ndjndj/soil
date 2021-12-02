@@ -39,6 +39,7 @@ export default function DailyReport() {
     const [value, setValue] = useState(0);
     const [tabNames, setTabNames] = useState([]);
     const [open, setOpen] = useState(false);
+    const [tabInfo, setTabInfo] = useState({});
 
     function handleChange(e, newValue) {
         setValue(newValue);
@@ -46,13 +47,13 @@ export default function DailyReport() {
 
     function handleClick() {
         new Promise((resolve) => {
-            setTabs([...tabs, 'tabs']);
+            setTabs({ ...tabInfo, [String(Object.keys(tabInfo).length)]: 'new' });
         }).then(() => {
             setValue(tabs.length-1);
         });
 
 
-        setValue(tabs.length);
+        //setValue(tabs.length);
         console.log(tabs);
     }
 
