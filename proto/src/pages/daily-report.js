@@ -89,7 +89,9 @@ export default function DailyReport() {
         return tabs.map((tabName, i) => {
             return <Tab
                 onDoubleClick={handleOnDoubleClick}
-                label={'tab is ' + String(i)} {...a11yProps(i)} />
+                label={'tab is ' + String(i)}
+                {...a11yProps(i)}
+            />
         });
     }
 
