@@ -47,9 +47,9 @@ export default function DailyReport() {
 
     function handleClick() {
         new Promise((resolve) => {
-            setTabs({ ...tabInfo, [String(Object.keys(tabInfo).length)]: 'new' });
+            setTabInfo({ ...tabInfo, [String(Object.keys(tabInfo).length)]: 'new' });
         }).then(() => {
-            setValue(tabs.length-1);
+            setValue(Object.keys(tabInfo).length-1);
         });
 
 
@@ -76,9 +76,9 @@ export default function DailyReport() {
         }
     }
 
-    function updateTabList(tabs) {
-        return tabs.map((tabName, i) => {
-            return <TabPanel value={value} index={i}>
+    function updateTabList(tabInfo) {
+        return Object.keys(tabInfo).map((value, i) => {
+            return <TabPanel key={i} value={value} index={i}>
                 <Container maxWidth='lg'>
                     <SimpleMDE events={{'drop': handleDrop}} />
                 </Container>
@@ -86,8 +86,8 @@ export default function DailyReport() {
         });
     }
 
-    function updateTabHead(tabs) {
-        return tabs.map((tabName, i) => {
+    function updateTabHead(tabInfo) {
+        return Object.keys(tabInfo).map((value, i) => {
             return <Tab
                 onDoubleClick={handleOnDoubleClick}
                 label={'tab is ' + String(i)}
@@ -118,7 +118,7 @@ export default function DailyReport() {
             </Tabs>
 
             <React.Fragment>
-                {updateTabList(tabs)}
+                {updateTabList(tabInfo)}
             </React.Fragment>
 
         </React.Fragment>
