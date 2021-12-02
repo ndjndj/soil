@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 
 export default function InputModal(props) {
-    const { open, onClose } = props;
+    const { open, onClose, onClick } = props;
     const classes = useStyles();
     return(
         <Modal
@@ -31,7 +31,7 @@ export default function InputModal(props) {
             <Paper className={classes.root}>
                 <TextField className={classes.root} />
 
-
+                <Button onClick={onClick}>OK</Button>
             </Paper>
 
         </Modal>
