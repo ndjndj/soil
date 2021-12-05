@@ -46,15 +46,8 @@ export default function DailyReport() {
     }
 
     function handleClick() {
-        new Promise((resolve) => {
-            setTabInfo({ ...tabInfo, [String(Object.keys(tabInfo).length)]: 'new' });
-            console.log(Object.keys(tabInfo).length);
-            console.log('setTabInfo');
-        }).then(() => {
-            setValue(Object.keys(tabInfo).length);
-            console.log(Object.keys(tabInfo).length);
-            console.log('setTabInfo length');
-        });
+        setTabInfo({ ...tabInfo, [String(Object.keys(tabInfo).length)]: 'new' });
+        setValue(Object.keys(tabInfo).length);
     }
 
     function handleClose() {
@@ -106,7 +99,7 @@ export default function DailyReport() {
                 tabName={"tab"}
             />
             <Tabs
-                value={Object.keys(tabInfo).length-1}
+                value={value}
                 onChange={handleChange}
                 aria-label='simple tab example'
                 variant='scrollable'
