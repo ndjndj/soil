@@ -18,8 +18,14 @@ const useStyles = makeStyles({
 
 
 export default function InputModal(props) {
-    const { open, onClose, onClick, tabName } = props;
+    const { open, onClose, tabName, index } = props;
     const classes = useStyles();
+    const [name, setName] = useState("");
+    
+    function handleClick() {
+        onClose(tabName, index);
+    }
+
     return(
         <Modal
             maxWidth='md'
