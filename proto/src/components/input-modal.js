@@ -22,7 +22,8 @@ export default function InputModal(props) {
     const classes = useStyles();
     const [fieldName, setFieldName] = useState('');
     function handleClick(tabName, index) {
-        onClose(tabName, index);
+        onChange(tabName, index);
+        onClose();
     }
 
     return(
