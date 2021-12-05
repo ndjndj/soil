@@ -54,15 +54,9 @@ export default function DailyReport() {
         console.log(tabInfo);
     }
 
-    function handleClose() {
+    function handleClose(tabName, index) {
         setOpen(false);
-    }
-
-    function changeTabName(tabName, index) {
-        setTabInfo({
-            ...tabInfo,
-            [String(index)]: tabName
-        });
+        setTabInfo({...tabInfo, [String(index)]: tabName});
     }
 
     function handleOnDoubleClick() {
@@ -106,7 +100,7 @@ export default function DailyReport() {
             <Header />
             <InputModal
                 open={open}
-                onClose={handleClose}
+                onClose={() => {handleClose(tabInfo[value], value)}}
                 tabName={tabInfo[value]}
             />
             <Tabs
