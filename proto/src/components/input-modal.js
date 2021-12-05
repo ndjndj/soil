@@ -21,7 +21,7 @@ export default function InputModal(props) {
     const { open, onClose, tabName, index } = props;
     const classes = useStyles();
     const [name, setName] = useState("");
-    
+
     function handleClick() {
         onClose(tabName, index);
     }
@@ -35,7 +35,11 @@ export default function InputModal(props) {
             aria-describedby="simple-modal-description"
         >
             <Paper className={classes.root}>
-                <TextField className={classes.root} value={tabName} />
+                <TextField
+                    className={classes.root}
+                    value={name}
+                    onChange={(e) => {setName(e.target.value)}}
+                />
 
                 <Button onClick={onClose}>OK</Button>
             </Paper>
