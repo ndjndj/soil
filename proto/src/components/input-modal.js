@@ -41,7 +41,7 @@ export default function InputModal(props) {
                     onChange={(e) => {setName(e.target.value)}}
                 />
 
-                <Button onClick={() => {handleClick(name, inex)}}>OK</Button>
+                <Button onClick={() => {handleClick(name, index)}}>OK</Button>
             </Paper>
 
         </Modal>
