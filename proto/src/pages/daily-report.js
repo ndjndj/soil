@@ -59,6 +59,10 @@ export default function DailyReport() {
         setTabInfo({...tabInfo, [String(index)]: tabName});
     }
 
+    function changeTabName(tabName, index) {
+        setTabInfo({...tabInfo, [String(index)]: tabName});
+    }
+
     function handleOnDoubleClick() {
         console.log('On double click');
         console.log(tabInfo[value]);
