@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid';
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 export default function InputModal(props) {
     const { open, onClose, tabName, index } = props;
     const classes = useStyles();
-    const [name, setName] = useState(tabName);
+    const [name, setName] = useState("");
 
 
     function handleClick() {
