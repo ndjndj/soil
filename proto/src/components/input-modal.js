@@ -36,7 +36,7 @@ export default function InputModal(props) {
             <Paper className={classes.root}>
                 <TextField
                     className={classes.root}
-                    value={tabName}
+                    placeholder={tabName}
                     onChange={(e) => {onChange(e.target.value, index)}}
                 />
 
