@@ -70,8 +70,8 @@ export default function DailyReport() {
     }
 
     function updateTabList(tabInfo) {
-        return Object.keys(tabInfo).map((value, i) => {
-            return <TabPanel key={i} value={i} index={i}>
+        return Object.keys(tabInfo).map((_value, i) => {
+            return <TabPanel key={i} value={value} index={i}>
                 <Container maxWidth='lg'>
                     <SimpleMDE events={{'drop': handleDrop}} />
                 </Container>
