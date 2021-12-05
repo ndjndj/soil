@@ -38,7 +38,7 @@ export default function InputModal(props) {
                 <TextField
                     className={classes.root}
                     value={name}
-                    onChange={(e) => {setName(e.target.value)}}
+                    onChange={(e) => {onClose(e.target.value, index)}}
                 />
 
                 <Button onClick={() => {handleClick(name, index)}}>OK</Button>
