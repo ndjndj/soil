@@ -49,11 +49,11 @@ export default function DailyReport() {
         new Promise((resolve) => {
             setTabInfo({ ...tabInfo, [String(Object.keys(tabInfo).length)]: 'new' });
             console.log(Object.keys(tabInfo).length);
-
+            console.log('setTabInfo');
         }).then(() => {
             setValue(Object.keys(tabInfo).length);
             console.log(Object.keys(tabInfo).length);
-
+            console.log('setTabInfo length');
         });
         console.log(Object.keys(tabInfo).length);
         console.log(tabInfo);
