@@ -61,6 +61,7 @@ export default function DailyReport() {
 
     function handleOnDoubleClick() {
         console.log('On double click');
+        console.log(tabInfo[value]);
         setOpen(true);
     }
 

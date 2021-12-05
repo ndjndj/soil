@@ -20,7 +20,8 @@ const useStyles = makeStyles({
 export default function InputModal(props) {
     const { open, onClose, tabName, index } = props;
     const classes = useStyles();
-    const [name, setName] = useState("");
+    const [name, setName] = useState(tabName);
+
 
     function handleClick() {
         onClose(tabName, index);
