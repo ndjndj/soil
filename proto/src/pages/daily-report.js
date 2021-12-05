@@ -104,6 +104,7 @@ export default function DailyReport() {
                 open={open}
                 onClose={() => {handleClose(tabInfo[value], value)}}
                 tabName={tabInfo[value]}
+                index={value}
             />
             <Tabs
                 value={value}
