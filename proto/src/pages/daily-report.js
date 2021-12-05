@@ -56,7 +56,6 @@ export default function DailyReport() {
 
     function handleClose(tabName, index) {
         setOpen(false);
-        //setTabInfo({...tabInfo, [String(index)]: tabName});
     }
 
     function changeTabName(tabName, index) {
