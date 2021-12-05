@@ -46,8 +46,12 @@ export default function DailyReport() {
     }
 
     function handleClick() {
-        setTabInfo({ ...tabInfo, [String(Object.keys(tabInfo).length)]: 'new' });
+        setTabInfo({
+            ...tabInfo,
+            [String(Object.keys(tabInfo).length)]: `new${ + String(Object.keys(tabInfo).length)}`
+        });
         setValue(Object.keys(tabInfo).length);
+        console.log(tabInfo);
     }
 
     function handleClose() {
@@ -83,7 +87,7 @@ export default function DailyReport() {
         return Object.keys(tabInfo).map((value, i) => {
             return <Tab
                 onDoubleClick={handleOnDoubleClick}
-                label={tabInfo[value] + String(i)}
+                label={tabInfo[value]}
                 {...a11yProps(i)}
             />
         });
@@ -96,7 +100,7 @@ export default function DailyReport() {
             <InputModal
                 open={open}
                 onClose={handleClose}
-                tabName={"tab"}
+                tabName={tabInfo[value]}
             />
             <Tabs
                 value={value}
