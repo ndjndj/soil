@@ -31,7 +31,7 @@ export default function InputModal(props) {
             <Paper className={classes.root}>
                 <TextField className={classes.root} value={tabName} />
 
-                <Button onClick={onClick}>OK</Button>
+                <Button onClick={onClose}>OK</Button>
             </Paper>
 
         </Modal>
