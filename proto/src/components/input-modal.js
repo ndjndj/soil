@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 export default function InputModal(props) {
     const { open, onClose, tabName, index } = props;
     const classes = useStyles();
-    const [name, setName] = useState(tabName);
+    const [name, setName] = useState("");
 
     function handleClick() {
         onClose(tabName, index);
@@ -37,7 +37,7 @@ export default function InputModal(props) {
             <Paper className={classes.root}>
                 <TextField
                     className={classes.root}
-                    value={name}
+                    value={tabName}
                     onChange={(e) => {setName(e.target.value)}}
                 />
 
