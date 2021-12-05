@@ -21,7 +21,7 @@ export default function InputModal(props) {
     const { open, onClose, tabName, index, onChange } = props;
     const classes = useStyles();
     const [fieldName, setFieldName] = useState('');
-    function handleClick() {
+    function handleClick(tabName, index) {
         onClose(tabName, index);
     }
 
@@ -37,10 +37,11 @@ export default function InputModal(props) {
                 <TextField
                     className={classes.root}
                     placeholder={tabName}
-                    onChange={(e) => {onChange(e.target.value, index)}}
+                    onChange={(e) => {setFieldName(e.target.value)}}
+                    value={fieldName}
                 />
 
-                <Button onClick={() => {handleClick(tabName, index)}}>OK</Button>
+                <Button onClick={() => {handleClick(fieldName, index)}}>OK</Button>
             </Paper>
 
         </Modal>
