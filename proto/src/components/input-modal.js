@@ -23,6 +23,7 @@ export default function InputModal(props) {
     const [fieldName, setFieldName] = useState('');
     function handleClick(tabName, index) {
         onChange(tabName, index);
+        setFieldName('');
         onClose();
     }
 
