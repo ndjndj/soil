@@ -106,9 +106,10 @@ export default function DailyReport() {
             <Header />
             <InputModal
                 open={open}
-                onClose={() => {handleClose(tabInfo[value], value)}}
+                onClose={handleClose}
                 tabName={tabInfo[value]}
                 index={value}
+                onChange={changeTabName}
             />
             <Tabs
                 value={value}
