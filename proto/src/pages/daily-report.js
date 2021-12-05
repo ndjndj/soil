@@ -90,6 +90,7 @@ export default function DailyReport() {
             return <Tab
                 onDoubleClick={handleOnDoubleClick}
                 label={tabInfo[value]}
+                key={i}
                 {...a11yProps(i)}
             />
         });
