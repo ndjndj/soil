@@ -55,8 +55,6 @@ export default function DailyReport() {
             console.log(Object.keys(tabInfo).length);
             console.log('setTabInfo length');
         });
-        console.log(Object.keys(tabInfo).length);
-        console.log(tabInfo);
     }
 
     function handleClose() {
@@ -108,7 +106,7 @@ export default function DailyReport() {
                 tabName={"tab"}
             />
             <Tabs
-                value={value}
+                value={Object.keys(tabInfo).length-1}
                 onChange={handleChange}
                 aria-label='simple tab example'
                 variant='scrollable'
