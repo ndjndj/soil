@@ -55,7 +55,9 @@ export default function DailyReport() {
     }
 
     function handleClose(tabName, index) {
-        setOpen(false);
+        if (window.confirm('not save?')) {
+            setOpen(false);
+        }
     }
 
     function changeTabName(tabName, index) {
