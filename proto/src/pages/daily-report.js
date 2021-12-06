@@ -121,6 +121,7 @@ export default function DailyReport() {
     return(
         <React.Fragment>
             <Header />
+            <Button>save</Button>
             <InputModal
                 open={open}
                 onClose={handleClose}
