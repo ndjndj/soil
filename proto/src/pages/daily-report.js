@@ -117,6 +117,21 @@ export default function DailyReport() {
         });
     }
 
+    function onClickWithSaveButton() {
+        let saveJson = {};
+
+        Object.keys(tabInfo).forEach((value, i) =>{
+            saveJson[i] = {
+                'tabName': tabInfo[value],
+                'markdown-text': markdowns[value]
+            }
+        })
+
+        console.log(saveJson);
+        window.alert("complete");
+
+    }
+
     const classes = useStyles();
     return(
         <React.Fragment>
