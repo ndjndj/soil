@@ -20,7 +20,7 @@ import InputModal from '../components/input-modal';
 
 const useStyles = makeStyles({
     tabs: {
-        marginTop: '2%'
+        marginTop: '5%'
     }
 });
 
