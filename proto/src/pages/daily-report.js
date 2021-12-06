@@ -49,6 +49,13 @@ export default function DailyReport() {
             [String(Object.keys(tabInfo).length)]: `new${ + String(Object.keys(tabInfo).length)}`
         });
         setValue(Object.keys(tabInfo).length);
+
+
+        setMarkdowns({
+            ...markdowns,
+            [String(Object.keys(markdowns).length)]: `new MarkdownText.`
+
+        });
         console.log(tabInfo);
     }
 
