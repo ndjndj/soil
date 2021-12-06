@@ -94,7 +94,7 @@ export default function DailyReport() {
         return Object.keys(tabInfo).map((_value, i) => {
             return <TabPanel key={i} value={value} index={i}>
                 <Container maxWidth='lg'>
-                    <SimpleMDE events={{'drop': handleDrop}} />
+                    <SimpleMDE events={{'drop': handleDrop}} value={markdowns[i]} />
                 </Container>
             </TabPanel>
         });
