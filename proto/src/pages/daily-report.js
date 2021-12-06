@@ -34,10 +34,8 @@ const ButtonInTabs = ({className, onClick, children}) => {
 }
 
 export default function DailyReport() {
-    const [tabs, setTabs] = useState([]);
     const [markdown, setMarkdown] = useState('');
     const [value, setValue] = useState(0);
-    const [tabNames, setTabNames] = useState([]);
     const [open, setOpen] = useState(false);
     const [tabInfo, setTabInfo] = useState({});
 
