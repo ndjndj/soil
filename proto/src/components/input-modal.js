@@ -21,18 +21,24 @@ export default function InputModal(props) {
     const { open, onClose, tabName, index, onChange } = props;
     const classes = useStyles();
     const [fieldName, setFieldName] = useState('');
-    
+
     function handleClick(tabName, index) {
         onChange(tabName, index);
         setFieldName('');
         onClose();
     }
 
+    function handleClose() {
+        if (window.confirm('not save?')) {
+            onClose();
+        }
+    }
+
     return(
         <Modal
             maxWidth='md'
             open={open}
-            onClose={onClose}
+            onClose={handleClose}
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
         >
