@@ -136,7 +136,7 @@ export default function DailyReport() {
     return(
         <React.Fragment>
             <Header />
-            <Button color='primary' variant='contained'>save</Button>
+            <Button color='primary' variant='contained' onClick={onClickWithSaveButton}>save</Button>
             <InputModal
                 open={open}
                 onClose={handleClose}
