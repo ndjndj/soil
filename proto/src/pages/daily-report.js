@@ -19,7 +19,9 @@ import TabPanel from '../components/tab-panel';
 import InputModal from '../components/input-modal';
 
 const useStyles = makeStyles({
-
+    tabs: {
+        marginTop: '2%'
+    }
 });
 
 function a11yProps(index) {
@@ -131,6 +133,7 @@ export default function DailyReport() {
                 onChange={handleChange}
                 aria-label='simple tab example'
                 variant='scrollable'
+                className={classes.tabs}
             >
                 {updateTabHead(tabInfo)}
                 <ButtonInTabs onClick={handleClick}>
