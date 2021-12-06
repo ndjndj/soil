@@ -76,6 +76,13 @@ export default function DailyReport() {
         }
     }
 
+    function onChangeWithMarkdown(value, index) {
+        setMarkdowns({
+            ...markdowns,
+            [String(index)]: value
+        });
+    }
+
     function updateTabList(tabInfo) {
         return Object.keys(tabInfo).map((_value, i) => {
             return <TabPanel key={i} value={value} index={i}>
