@@ -97,7 +97,7 @@ export default function DailyReport() {
                     <SimpleMDE
                         events={{'drop': handleDrop}}
                         value={markdowns[i]}
-                        onChange={(e) => {onChangeWithMarkdown(e.target.value, i)}}
+                        onChange={(e) => {onChangeWithMarkdown(e, i)}}
                     />
                 </Container>
             </TabPanel>
