@@ -1,13 +1,10 @@
-
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import Login from './login';
 import React from 'react';
 
 export default function Home() {
   return (
         <React.Fragment>
-            <Typography>test</Typography>
-            <Button color='primary' variant='contained' >test</Button>
+            <Login />
         </React.Fragment>
 
 
