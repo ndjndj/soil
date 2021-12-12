@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import axios from 'axios';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         minWidth: 275,
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function IssueList() {
-
+    const issuesList = useState({});
     const classes = useStyles();
     return (
         <React.Fragment>
