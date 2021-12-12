@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid';
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const testData = [
+var testData = [
     {'tytle': 'tytle1', 'created': 'created-1', 'updated': 'updated-1', 'type': 'type1'},
     {'tytle': 'tytle2', 'created': 'created-2', 'updated': 'updated-2', 'type': 'type2'},
     {'tytle': 'tytle3', 'created': 'created-3', 'updated': 'updated-3', 'type': 'type3'},
@@ -32,7 +32,15 @@ const testData = [
 ];
 
 export default function IssueList() {
-    const {issuesList, setIssuesList} = useState([]);
+    const [issueList, setIssueList] = useState([]);
+    useEffect(
+        () => {
+            setIssueList([...issueList, ...testData]);
+        },
+        []
+    );
+
+
 
     const classes = useStyles();
     return (
