@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Header from '../src/components/header';
 import Typography from '@material-ui/core/Typography';
+import ListItem from '../src/components/lsit-item';
 import Container from '@material-ui/core/Container';
 import axios from 'axios';
 
@@ -28,62 +29,7 @@ export default function IssueList() {
     return (
         <React.Fragment>
             <Header />
-            <Paper className={classes.root}>
-        <Grid container spacing={3}>
-            <Grid item xs>
-                <Typography variant="h2" className={classes.title}>title</Typography>
-            </Grid>
-            <Grid item xs>
-                <Typography component="p">created day: </Typography>
-                <Typography component="p">updated day: </Typography>
-            </Grid>
-            <Grid item xs>
-                <Typography variant="h5">type </Typography>
-            </Grid>
-        </Grid>
-    </Paper>
-    <Paper className={classes.root}>
-        <Grid container spacing={3}>
-            <Grid item xs>
-                <Typography variant="h2" className={classes.title}>title</Typography>
-            </Grid>
-            <Grid item xs>
-                <Typography component="p">created day: </Typography>
-                <Typography component="p">updated day: </Typography>
-            </Grid>
-            <Grid item xs>
-                <Typography variant="h5">type </Typography>
-            </Grid>
-        </Grid>
-    </Paper>
-    <Paper className={classes.root}>
-        <Grid container spacing={3}>
-            <Grid item xs>
-                <Typography variant="h2" className={classes.title}>title</Typography>
-            </Grid>
-            <Grid item xs>
-                <Typography component="p">created day: </Typography>
-                <Typography component="p">updated day: </Typography>
-            </Grid>
-            <Grid item xs>
-                <Typography variant="h5">type </Typography>
-            </Grid>
-        </Grid>
-    </Paper>
-    <Paper className={classes.root}>
-        <Grid container spacing={3}>
-            <Grid item xs>
-                <Typography variant="h2" className={classes.title}>title</Typography>
-            </Grid>
-            <Grid item xs>
-                <Typography component="p">created day: </Typography>
-                <Typography component="p">updated day: </Typography>
-            </Grid>
-            <Grid item xs>
-                <Typography variant="h5">type </Typography>
-            </Grid>
-        </Grid>
-    </Paper>
+            
         </React.Fragment>
     );
 }
