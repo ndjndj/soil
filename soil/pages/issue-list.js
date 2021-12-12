@@ -23,13 +23,22 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+const testData = [
+    {'tytle': 'tytle1', 'created': 'created-1', 'updated': 'updated-1', 'type': 'type1'},
+    {'tytle': 'tytle2', 'created': 'created-2', 'updated': 'updated-2', 'type': 'type2'},
+    {'tytle': 'tytle3', 'created': 'created-3', 'updated': 'updated-3', 'type': 'type3'},
+    {'tytle': 'tytle4', 'created': 'created-4', 'updated': 'updated-4', 'type': 'type4'},
+    {'tytle': 'tytle5', 'created': 'created-5', 'updated': 'updated-5', 'type': 'type5'},
+];
+
 export default function IssueList() {
-    const issuesList = useState({});
+    const {issuesList, setIssuesList} = useState([]);
+
     const classes = useStyles();
     return (
         <React.Fragment>
             <Header />
-            
+
         </React.Fragment>
     );
 }
