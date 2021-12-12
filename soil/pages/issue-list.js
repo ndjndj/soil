@@ -40,13 +40,21 @@ export default function IssueList() {
         []
     );
 
-
-
     const classes = useStyles();
     return (
         <React.Fragment>
             <Header />
-
+            {issueList.map(
+                (item, i)=>{
+                    return <ListItem
+                        title={item['tytle']}
+                        created={item['created']}
+                        updated={item['updated']}
+                        type={item['type']}
+                        key={i}
+                    />
+                }
+            )}
         </React.Fragment>
     );
 }
