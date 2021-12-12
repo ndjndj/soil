@@ -16,23 +16,23 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function ListItem() {
-  const classes = useStyles();
-
-  return (
-    <Paper className={classes.root}>
-        <Grid container spacing={3}>
-            <Grid item xs>
-                <Typography variant="h2" className={classes.title}>title</Typography>
+export default function ListItem(props) {
+    const {title, type, created, updated} = props;
+    const classes = useStyles();
+    return (
+        <Paper className={classes.root}>
+            <Grid container spacing={3}>
+                <Grid item xs>
+                    <Typography variant="h2" className={classes.title}>{title}</Typography>
+                </Grid>
+                <Grid item xs>
+                    <Typography component="p">{created}</Typography>
+                    <Typography component="p">{updated}</Typography>
+                </Grid>
+                <Grid item xs>
+                    <Typography variant="h5">{type}</Typography>
+                </Grid>
             </Grid>
-            <Grid item xs>
-                <Typography component="p">created day: </Typography>
-                <Typography component="p">updated day: </Typography>
-            </Grid>
-            <Grid item xs>
-                <Typography variant="h5">type </Typography>
-            </Grid>
-        </Grid>
-    </Paper>
-  );
+        </Paper>
+    );
 }
