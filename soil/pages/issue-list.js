@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from '../src/components/header';
 import ListItem from '../src/components/lsit-item';
+import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
 
@@ -38,6 +39,7 @@ export default function IssueList() {
     return (
         <React.Fragment>
             <Header />
+            <Button color='primary' variant='contained' >new</Button>
             {issueList.map(
                 (item, i)=>{
                     return <ListItem
