@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import Header from '../components/header';
 import Container from '@material-ui/core/Container';
 import Tabs from '@material-ui/core/Tabs';
 import SimpleMDE from 'react-simplemde-editor';
@@ -9,6 +8,7 @@ import 'easymde/dist/easymde.min.css';
 import Tab from '@material-ui/core/Tab';
 import TabPanel from '../src/components/tab-panel';
 import InputModal from '../src/components/input-modal';
+import Header from '../src/components/header';
 
 const useStyles = makeStyles({
     tabs: {
