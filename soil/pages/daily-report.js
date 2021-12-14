@@ -36,10 +36,12 @@ export default function DailyReport() {
 
     useEffect(
         () => {
+            if (!window) { return; }
             window.addEventListener(
                 'beforeunload',
-                () => {
-                    window.alert('unload!!');
+                (e) => {
+                    e.preventDefault();
+                    e.returnValue = '';
                 }
             );
             return () => window.removeEventListener('beforeunload', () =>{window.alert('unload!!');});
