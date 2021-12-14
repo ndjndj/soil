@@ -34,6 +34,17 @@ export default function DailyReport() {
     const [open, setOpen] = useState(false);
     const [tabInfo, setTabInfo] = useState({});
 
+    useEffect(
+        () => {
+            window.addEventListener(
+                'beforeunload',
+                () => {
+                    window.alert('unload!!');
+                }
+            )
+        }
+    );
+
     function handleChange(e, newValue) {
         setValue(newValue);
     }
