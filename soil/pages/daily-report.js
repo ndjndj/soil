@@ -46,10 +46,7 @@ export default function DailyReport() {
             );
             return () => window.removeEventListener(
                 'beforeunload',
-                (e) =>{
-                    e.preventDefault();
-                    e.returnValue = '';
-                });
+                () =>{});
         },
         []);
 
