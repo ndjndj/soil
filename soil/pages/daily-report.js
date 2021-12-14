@@ -44,7 +44,13 @@ export default function DailyReport() {
                     e.returnValue = '';
                 }
             );
-            return () => window.removeEventListener('beforeunload', () =>{window.alert('unload!!');});
+            return () => window.removeEventListener(
+                'beforeunload',
+                (e) =>{
+                    window.alert('unload!!');
+                    e.preventDefault();
+                    e.returnValue = '';
+                });
         },
         []);
 
