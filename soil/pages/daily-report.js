@@ -7,8 +7,8 @@ import Tabs from '@material-ui/core/Tabs';
 import SimpleMDE from 'react-simplemde-editor';
 import 'easymde/dist/easymde.min.css';
 import Tab from '@material-ui/core/Tab';
-import TabPanel from '../components/tab-panel';
-import InputModal from '../components/input-modal';
+import TabPanel from '../src/components/tab-panel';
+import InputModal from '../src/components/input-modal';
 
 const useStyles = makeStyles({
     tabs: {
